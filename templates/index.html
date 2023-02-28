@@ -1,0 +1,145 @@
+{% extends 'bootstrap/base.html' %}
+
+{%block head %}
+    {{super()}}
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+{% endblock %}
+
+{% block title %}Soroosh Nemati | Full-Stack Developer{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+<nav class="autohide navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" id="brand" href="{{ url_for('home') }}"><img src="static/images/brand.png"></a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav links">
+        <li><a href="https://github.com/sonemati"><img src="static/images/github.png" title="GitHub"></a></li>
+        <li><a href="https://www.linkedin.com/in/sonemati/"><img src="static/images/linkedin.png" title="LinkedIn"></a></li>
+        <li><a href="https://t.me/sonemati"><img src="static/images/telegram.png" title="Telegram"></a></li>
+        <li><a href="mailto:sornemati@gmail.com"><img src="static/images/envelope.png" title="Email"></a></li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+    <section class="text-center" id="jumbotron">
+        <h1 id="title"><strong>Full-Stack & Junior Python Developer</strong></h1>
+        <h3><strong>I design and code beautifully simple things, and I love what I do.</strong></h3>
+        <div class="container col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1" id="intro">
+            <h2 class="text-center"><strong>Hello there. My name is Sirius.</strong></h2>
+            <h4 class="text-center" style="line-height: 1.5;"><strong>As a developer, I have been able to put my skills to use by developing
+                and deploying beneficial applications in the past year. I am particularly passionate about using my
+                skills to solve complex problems and staying up-to-date with the latest developments in the field, all
+                to create enjoyable and intuitive user experiences.</strong></h4>
+        </div>
+        <div class="well col-lg-8 col-lg-offset-2 col-xs-10 col-xs-offset-1" id="lang-t">
+        <table class="table">
+            <tr>
+                <th class="text-center">
+                    <img src="static/images/front.png" style="width: 69px; height: 64px;">
+                    <h3 class="heading">Front-End Developer</h3>
+                    <h4 class="desc">I enjoy bringing ideas to life using code and the most recent tools.</h4>
+                </th>
+                <th class="text-center">
+                    <img src="static/images/back.png">
+                    <h3 class="heading">Back-End Developer</h3>
+                    <h4 class="desc">I love to code things from scratch in python and solving complicated issues.</h4>
+                </th>
+                <th class="text-center">
+                    <img src="static/images/tools.png" style="width: 62px; height: 64px;">
+                    <h3 class="heading">Developing Tools</h3>
+                    <h4 class="desc">I work with various applications for my projects using the latest features in development.</h4>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h4 class="heading">Languages:</h4>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>Git</p>
+                </td>
+                <td>
+                    <h4 class="heading">Languages & Libraries:</h4>
+                    <p>Python</p>
+                    <p>Django</p>
+                    <p>Flask</p>
+                    <p>Pandas</p>
+                </td>
+                <td>
+                    <h4 class="heading">Dev Tools:</h4>
+                    <p>Atom</p>
+                    <p>Bootstrap</p>
+                    <p>Bulma</p>
+                    <p>Postman</p>
+                    <p>PyCharm</p>
+                    <p>Sublime</p>
+                    <p>SQLite</p>
+                    <p>Terminal</p>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </section>
+
+    <section id="line"></section>
+
+    <section class="text-center">
+        <div id="projects-sec">
+            <h2 class="text-center"><strong>My Recent Projects</strong></h2>
+            <h3 class="text-center"><strong>Here are a few past design projects I've worked on. Want to see more?
+                <a href="mailto:sornemati@gmail.com">Email me</a>.</strong></h3>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                {% for project in projects %}
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{{ projects[project]['path'] }}">
+                        <div class="caption">
+                            <h3>{{ project }}</h3>
+                            <p>{{ projects[project]['lang'] }}</p>
+                            <p>{{ projects[project]['desc'] }}</p>
+                            <p><a href="{{ projects[project]['link'] }}" class="btn" id="view-btn" role="button">View Project</a></p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="text-center btm">
+        <div class="container contact">
+            <div class="col-sm-4"><h2>Start A Project</h2></div>
+            <div class="col-sm-4"><p style="font-weight: 100; margin-top: 18px;">Interested in working together? Let's chat about your ideas and we can make it a reality!</p></div>
+            <div class="col-sm-4"><a href="mailto:sornemati@gmail.com" class="btn btn-default btn-lg" style="margin-top: 16px;">Contact Me</a></div>
+        </div>
+        <div class="logo"><img style="height: 90px;" src="{{ url_for('static', filename='images/Logo.png') }}"></div>
+        <div class="footer"><p>Developed by ME|©2023 Soroosh Nemati</p></div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+{{super()}}
+{% endblock %}

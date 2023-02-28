@@ -1,0 +1,172 @@
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.scrolled-down{
+  transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+
+.scrolled-up{
+  transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+
+#navbar {
+    background-color: #26d989;
+}
+
+.links {
+    margin-right: 20px;
+}
+
+.navbar-nav li a {
+    transition-duration: 0.4s;
+}
+
+.navbar-nav li a:hover {
+    opacity: 0.6;
+}
+
+#brand {
+    padding-top: 7px;
+    padding-left: 15px;
+}
+
+#jumbotron {
+    margin-top: 0px;
+    background-image: url("img/pc.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    color: white;
+    height: 1320px;
+    padding-top: 104px;
+}
+
+#title {
+    font-size: 50px;
+}
+
+#intro {
+    margin-top: 650px;
+    background-color: black;
+    color: white;
+    margin-bottom: 50px;
+}
+
+#lang-t {
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    border-color: #26d989;
+    border-width: 2px;
+    margin-right: 150px;
+    padding: 5% 1%;
+}
+
+h3.heading {
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+h4.desc {
+    padding-bottom: 20px;
+}
+
+h4.heading {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #6c23dc;
+}
+
+ul {
+    list-style-type:none;
+}
+
+#line {
+    padding-top: 10px;
+    background-color: #6c23dc;
+}
+
+#projects-sec {
+    margin-top: 540px;
+    background-color: #6c23dc;
+    color: white;
+    padding: 1% 0%;
+}
+
+#projects-sec a {
+    color: #23DC6C;
+}
+
+.row {
+    margin-top: 50px;
+}
+
+.thumbnail {
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #26d989;
+}
+
+.thumbnail img {
+    margin-top: 8px;
+}
+
+.caption {
+    height: 250px;
+}
+
+#view-btn {
+    margin-top: 20px;
+    background-color: #17238C;
+    border-color: white;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+#view-btn:hover {
+    opacity: 0.6;
+}
+
+.btm {
+    margin-top: 100px;
+    padding: 2% 0%;
+    background-color: #6c23dc;
+}
+.contact {
+    border-radius: 25px;
+    background-color: #0F175C;
+    color: white;
+    padding: 1% 1%;
+    margin: 5% 9.5%;
+    width: 80%;
+}
+
+.contact div {
+    margin: 2% 0%;
+}
+
+.contact div a {
+    border-radius: 25px;
+    background-color: transparent;
+    border-color: white;
+    border-width: 5px;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.contact div a:hover {
+    background-color: #26d989;
+    color: black;
+    border-color: #26d989;
+}
+
+.logo {
+    margin-top: 15%;
+    margin-bottom: 1%;
+}
+
+.footer {
+    color: white;
+    font-weight: 10;
+}
