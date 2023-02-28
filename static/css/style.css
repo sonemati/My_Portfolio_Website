@@ -63,6 +63,10 @@
     padding: 3% 0%;
 }
 
+table {
+    table-layout: fixed;
+}
+
 h3.heading {
     font-weight: bold;
     padding-bottom: 30px;
