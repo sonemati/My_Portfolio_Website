@@ -51,6 +51,7 @@
     background-color: black;
     color: white;
     margin-bottom: 50px;
+    border-radius: 25px;
 }
 
 #lang-t {
@@ -59,8 +60,7 @@
     border-radius: 25px;
     border-color: #26d989;
     border-width: 2px;
-    margin-right: 150px;
-    padding: 5% 1%;
+    padding: 3% 0%;
 }
 
 h3.heading {
